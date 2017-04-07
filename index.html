@@ -10,6 +10,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
     </style>
+
+
 </head>
 
 <body>
@@ -20,7 +22,7 @@
     </div>
     <div class="bio">
         <p>Birth Date: 28.03.1993</p>
-        <p>Age: 24</p>
+        <p>Age: <span id='age'></span></p>
         <p>Moscow, Russia</p>
     </div>
 
@@ -73,6 +75,27 @@
             <li>Skype: viktoria_todd</li>
         </ul>
     </div>
+    <script type="text/javascript">
+        function calculateAge(birthDay, birthMonth, birthYear) {
+            todayDate = new Date();
+            todayYear = todayDate.getFullYear();
+            todayMonth = todayDate.getMonth();
+            todayDay = todayDate.getDate();
+            age = todayYear - birthYear;
+
+            if (todayMonth < birthMonth - 1) {
+                age--;
+            }
+
+            if (birthMonth - 1 == todayMonth && todayDay < birthDay) {
+                age--;
+            }
+            return age;
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('age').innerHTML = calculateAge(28, 3, 1993);
+        });
+    </script>
 </body>
 
 </html>
