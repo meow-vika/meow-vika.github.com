@@ -57,9 +57,7 @@ ul {
     font-weight: bold;
     text-align: center;
 }
-.header h1:hover {
-  color: #00FFFF;
-}
+
 
 .bio {
   text-align: center;
@@ -101,4 +99,9 @@ margin: 20px 60px;
   clear: both;
 text-align: center;
 padding: 20px 0 20px 0;
+}
+
+.footer {
+  width: 700px;
+  text-align: center;
 }
