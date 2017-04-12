@@ -7,24 +7,11 @@ html, body, h1, h2, h3, h4, p, div, ul, ol, li {
   font-size: 100%;
 }
 
-
-
-
-
-h3 {
-font-family: 'Roboto Mono', monospace;
+.work h3, .education h3, .skills h3, .contacts h3 {
+  font-family: 'Roboto Mono', monospace;
   font-size: 30px;
-  text-align: center;
-    color: #000000;
-    width: 500px;
-    margin: 0 auto 0 auto;
 }
 
-p{
-font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
-  text-decoration: none;
-}
 li {
 font-family: 'Roboto Mono', monospace;
   font-size: 18px;
@@ -43,65 +30,111 @@ a:hover {
   color: #00FFFF;
   text-decoration: none;
 }
-ul {
+
+.education ul, .skills ul, .contacts ul {
   list-style-type: none;
 }
-.header, .bio, .work, .education, .skills, .contacts {
-  width: 700px;
+
+.header, .footer {
+  width: 100%;
   margin: 0 auto;
 
 }
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+align-items: center;
+}
+
+.name {
+  align-self: stretch;
   font-family: 'Roboto Mono', monospace;
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+justify-content: space-around;
 }
 
 
 .bio {
+align-self: flex-start;
+  justify-content: space-around;
+  width: 100%;
   text-align: center;
-  padding: 20px 0 20px 0;
-  width: 700px;
-  margin: 0 auto 0 auto;
+font-size: 18px;
 }
-.bio p {
 
+.work {
+align-self: flex-start;
+justify-content: space-around;
+width: 100%;
+text-align: center;
+}
+
+.work p {
   font-size: 18px;
 }
-.work {
-  text-align: center;
-  margin-bottom: 20px;
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-content: stretch;
+flex-flow: row nowrap;
+padding: 20px 20px 0px 20px;
+
 }
+
 .education {
-  float:left;
-  width: 500px;
-text-align: left;
-margin: 20px 60px;
+align-self: flex-start;
+
 }
 
 .education h3 {
-  text-align: left;
+text-align: left;
 }
 
 .skills {
-  float: right;
-  width: auto;
+align-self: flex-end;
 text-align: right;
-margin: 20px 60px;
-}
 
-.skills h3 {
-  text-align: right;
-}
-
-.contacts {
-  clear: both;
-text-align: center;
-padding: 20px 0 20px 0;
 }
 
 .footer {
-  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.contacts {
+align-self: center;
+text-align: center;
+justify-content: space-around;
+}
+
+.contacts h3 {
   text-align: center;
+}
+
+.email {
+  align-self: center;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  .header, .footer {
+    width: 100%;
+    flex-flow: column wrap;
+  }
+.content {
+  flex-flow: column wrap;
+  justify-content: space-between;
+
+}
+
+
 }
