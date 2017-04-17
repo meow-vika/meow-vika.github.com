@@ -94,6 +94,10 @@ align-self: flex-start;
 text-align: left;
 }
 
+.education a {
+  border-bottom: 1px solid black;
+}
+
 .skills {
 align-self: flex-end;
 text-align: right;
